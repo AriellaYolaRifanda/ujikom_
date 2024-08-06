@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tambah Mahasiswa</h1>
+    <h1 class="h3 mb-2 text-gray-800">Tambah Dosen</h1>
     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
         For more information about DataTables, please visit the <a target="_blank"
             href="https://datatables.net">official DataTables documentation</a>.</p>
@@ -9,16 +9,16 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Form Mahasiswa</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Form Dosen</h6>
         </div>
 
         <div class="card-body">
 
             <div class="table-responsive">
-                <form method="POST" id="formMhs">
+                <form method="POST" id="formDos">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">NIM</label>
-                        <input type="number" class="form-control" name="nim">
+                        <label for="exampleInputEmail1">Kode Dosen</label>
+                        <input type="number" class="form-control" name="kd_dosen">
 
                     </div>
                     <div class="form-group">
@@ -31,13 +31,8 @@
                         <input type="text" class="form-control" name="alamat">
 
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Jurusan</label>
-                        <input type="text" class="form-control" name="jurusan">
 
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" id="simpanMhs">Simpan</button>
+                    <button type="submit" class="btn btn-primary" id="simpanDos">Simpan</button>
                 </form>
 
             </div>
