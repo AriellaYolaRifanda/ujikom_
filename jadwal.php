@@ -59,3 +59,29 @@ switch ($_GET['action'])
     break;
 }
 ?>
+
+
+// Untuk Inner Join, nanti taronya disesuain tempat aja. 
+
+<?php
+// Koneksi ke database
+$conn = mysqli_connect("hostname", "username", "password", "database");
+
+// Query untuk menarik data dari tabel `dosen` dan `matakuliah`
+$query = "SELECT dosen.kd_dosen, matkul.kd_matkul 
+          FROM dosen 
+          INNER JOIN matkul";
+
+// Jalankan query
+$result = mysqli_query($conn, $query);
+
+// Loop melalui hasil query dan simpan ke tabel `jadwal`
+while($row = mysqli_fetch_assoc($result)) {
+    $kd_dosen = $row['kd_dosen'];
+    $kd_matkul = $row['kd_matkul'];
+    
+    // Insert data ke tabel `jadwal`
+    $insert_query = "INSERT INTO jadwal (kd_dosen, kd_matkul) VALUES ('$kd_dosen', '$kd_matkul')";
+    mysqli_query($conn, $insert_query);
+}
+?>
